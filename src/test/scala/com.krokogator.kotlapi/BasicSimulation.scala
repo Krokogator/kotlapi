@@ -4,6 +4,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef.http
 
 import scala.concurrent.duration.DurationInt
+import scala.language.postfixOps
 
 class BasicSimulation extends Simulation {
   val httpProtocol = http
@@ -14,9 +15,9 @@ class BasicSimulation extends Simulation {
   val scn = scenario("Scenario Name")
     .exec(
       http("random_request")
-        .get("/coroutinemock")
-//        .get("/mock")
+        .get("/coroutine")
     )
 
-  setUp(scn.inject(constantUsersPerSec(100).during(5.seconds)).protocols(httpProtocol))
+  setUp(scn.inject(rampUsersPerSec(100).to(1000).during(10.seconds))
+    .protocols(httpProtocol))
 }

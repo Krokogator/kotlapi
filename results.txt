@@ -1,0 +1,66 @@
+BLOCKING
+
+================================================================================
+---- Global Information --------------------------------------------------------
+> request count                                       5500 (OK=737    KO=4763  )
+> min response time                                    137 (OK=137    KO=4002  )
+> max response time                                  13967 (OK=13967  KO=5789  )
+> mean response time                                  4787 (OK=7144   KO=4422  )
+> std deviation                                       1669 (OK=3685   KO=351   )
+> response time 50th percentile                       4431 (OK=7565   KO=4393  )
+> response time 75th percentile                       4774 (OK=9873   KO=4678  )
+> response time 95th percentile                       8431 (OK=12770  KO=5031  )
+> response time 99th percentile                      12388 (OK=13716  KO=5351  )
+> mean requests/sec                                 239.13 (OK=32.043 KO=207.087)
+---- Response Time Distribution ------------------------------------------------
+> t < 800 ms                                            28 (  1%)
+> 800 ms < t < 1200 ms                                  16 (  0%)
+> t > 1200 ms                                          693 ( 13%)
+> failed                                              4763 ( 87%)
+---- Errors --------------------------------------------------------------------
+> j.n.ConnectException: Connection refused: no further informati   4763 (100,0%)
+on
+================================================================================
+
+ASYNC MONO
+
+================================================================================
+---- Global Information --------------------------------------------------------
+> request count                                       5500 (OK=5500   KO=0     )
+> min response time                                    102 (OK=102    KO=-     )
+> max response time                                   1500 (OK=1500   KO=-     )
+> mean response time                                   299 (OK=299    KO=-     )
+> std deviation                                        231 (OK=231    KO=-     )
+> response time 50th percentile                        228 (OK=228    KO=-     )
+> response time 75th percentile                        372 (OK=372    KO=-     )
+> response time 95th percentile                        745 (OK=745    KO=-     )
+> response time 99th percentile                       1293 (OK=1293   KO=-     )
+> mean requests/sec                                    500 (OK=500    KO=-     )
+---- Response Time Distribution ------------------------------------------------
+> t < 800 ms                                          5280 ( 96%)
+> 800 ms < t < 1200 ms                                 161 (  3%)
+> t > 1200 ms                                           59 (  1%)
+> failed                                                 0 (  0%)
+================================================================================
+
+ASYNC COROUTINE
+
+
+================================================================================
+---- Global Information --------------------------------------------------------
+> request count                                       5500 (OK=5500   KO=0     )
+> min response time                                    102 (OK=102    KO=-     )
+> max response time                                    807 (OK=807    KO=-     )
+> mean response time                                   243 (OK=243    KO=-     )
+> std deviation                                        150 (OK=150    KO=-     )
+> response time 50th percentile                        191 (OK=191    KO=-     )
+> response time 75th percentile                        324 (OK=324    KO=-     )
+> response time 95th percentile                        539 (OK=539    KO=-     )
+> response time 99th percentile                        644 (OK=644    KO=-     )
+> mean requests/sec                                    500 (OK=500    KO=-     )
+---- Response Time Distribution ------------------------------------------------
+> t < 800 ms                                          5498 (100%)
+> 800 ms < t < 1200 ms                                   2 (  0%)
+> t > 1200 ms                                            0 (  0%)
+> failed                                                 0 (  0%)
+================================================================================

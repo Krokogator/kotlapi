@@ -22,9 +22,7 @@ version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 sourceSets {
-	test {
-		scala
-	}
+	getByName("test").scala.srcDirs("src/test/scala")
 }
 
 repositories {
